@@ -5,24 +5,16 @@
  */
 package net.bryanbergen.services;
 
-import java.util.Random;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.Scope;
-import org.springframework.context.annotation.ScopedProxyMode;
-import org.springframework.stereotype.Service;
-
 /**
  *
  * @author bryan
  */
-@Service
-@Scope(proxyMode = ScopedProxyMode.TARGET_CLASS, value = BeanDefinition.SCOPE_PROTOTYPE)
 public class DefaultService implements SimpleService {
 
     private final int serviceValue;
 
-    public DefaultService() {
-        serviceValue = new Random().nextInt();
+    public DefaultService( int serviceValue ) {
+        this.serviceValue = serviceValue;
     }
 
     @Override
