@@ -9,7 +9,7 @@ package net.bryanbergen.services;
  *
  * @author bryan
  */
-public class DefaultService implements SimpleService {
+public final class DefaultService implements SimpleService {
 
     private final int serviceValue;
 
